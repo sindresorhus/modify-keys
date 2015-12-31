@@ -1,10 +1,6 @@
-'use strict';
-var test = require('ava');
-var modifyKeys = require('./');
+import test from 'ava';
+import fn from './';
 
-test(function (t) {
-	t.assert(modifyKeys({FOO: true}, function (key) {
-		return key.toLowerCase();
-	}).foo === true);
-	t.end();
+test(t => {
+	t.true(fn({FOO: true}, x => x.toLowerCase()).foo);
 });
