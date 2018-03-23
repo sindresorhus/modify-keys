@@ -6,37 +6,33 @@
 ## Install
 
 ```
-$ npm install --save modify-keys
+$ npm install modify-keys
 ```
 
 
 ## Usage
 
 ```js
-var modifyKeys = require('modify-keys');
+const modifyKeys = require('modify-keys');
 
-modifyKeys({FOO: true, bAr: false}, function (key, value) {
-	return key.toLowerCase();
-});
+modifyKeys({FOO: true, bAr: false}, (key, value) => key.toLowerCase());
 //=> {foo: true, bar: false}
 ```
 
 
 ## API
 
-### modifyKeys(input, modifier)
+### modifyKeys(input, transformer)
 
 Modifies the keys and returns a new object.
 
 #### input
 
-*Required*  
-Type: `object`
+Type: `Object`
 
-#### modifier(key, value)
+#### transformer(key, value)
 
-*Required*  
-Type: `function`
+Type: `Function`
 
 Gets the key and value for each item and is expected to return the new key.
 
@@ -48,4 +44,4 @@ See [`modify-values`](https://github.com/sindresorhus/modify-values) for modifyi
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

@@ -1,6 +1,6 @@
 import test from 'ava';
-import fn from './';
+import m from '.';
 
-test(t => {
-	t.true(fn({FOO: true}, x => x.toLowerCase()).foo);
+test('main', t => {
+	t.true(m({FOO: true}, x => x.toLowerCase()).foo);
 });
