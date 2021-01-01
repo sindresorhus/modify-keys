@@ -1,4 +1,4 @@
-# modify-keys [![Build Status](https://travis-ci.org/sindresorhus/modify-keys.svg?branch=master)](https://travis-ci.org/sindresorhus/modify-keys)
+# modify-keys
 
 > Modify the keys of an object
 
