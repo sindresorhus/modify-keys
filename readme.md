@@ -2,23 +2,20 @@
 
 > Modify the keys of an object
 
-
 ## Install
 
+```sh
+npm install modify-keys
 ```
-$ npm install modify-keys
-```
-
 
 ## Usage
 
 ```js
-const modifyKeys = require('modify-keys');
+import modifyKeys from 'modify-keys';
 
 modifyKeys({FOO: true, bAr: false}, (key, value) => key.toLowerCase());
 //=> {foo: true, bar: false}
 ```
-
 
 ## API
 
@@ -28,20 +25,14 @@ Modifies the keys and returns a new object.
 
 #### input
 
-Type: `Object`
+Type: `object`
 
 #### transformer(key, value)
 
 Type: `Function`
 
-Gets the key and value for each item and is expected to return the new key.
-
+Receives the key and value for each item and is expected to return the new key.
 
 ## Related
 
 See [`modify-values`](https://github.com/sindresorhus/modify-values) for modifying the values of an object.
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)

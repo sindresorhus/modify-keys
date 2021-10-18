@@ -1,6 +1,6 @@
 import test from 'ava';
-import m from '.';
+import modifyKeys from './index.js';
 
 test('main', t => {
-	t.true(m({FOO: true}, x => x.toLowerCase()).foo);
+	t.true(modifyKeys({FOO: true}, x => x.toLowerCase()).foo);
 });
